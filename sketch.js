@@ -77,7 +77,7 @@ images: [
   "img/xyz.png",
   "img/scen3.png",
   "img/kis4.mp4",
-  "svg-visual.html",
+  "img/creature1.mp4",
   "img/maleri.jpeg",
   "img/circ.png",
   "img/event6.png",
@@ -93,7 +93,7 @@ captions: [
    "Basement event poster",
   "Visual til Kismet Café SoMe",
   
-  "3D SVG creature experiment",
+  "3D SVG creature experiment – udviklet fra Illustrator-skitse til interaktiv Three.js-visual med fokus på motion, metallic materials og fleksible effekter til illustration og digital form",
   "Oliemaleri",
   "Poster til Circular Lab - bæredygtig workshop",
  
