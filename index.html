@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Celine Sophie von Christierson CV</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="art-layer"></div>
+
+  <main class="page">
+    <header class="top">
+      <p class="eyebrow">Digital CV / Portfolio</p>
+      <h1>Celine Sophie<br />von Christierson</h1>
+    </header>
+
+ <nav class="menu">
+  <button onclick="setScene(4)">Visuals</button>
+  <button onclick="setScene(0)">Kompetencer</button>
+  <button onclick="setScene(1)">Uddannelser</button>
+  <button onclick="setScene(2)">Events</button>
+  <button onclick="setScene(3)">SoMe</button>
+</nav>
+
+    <section class="content-grid">
+      <article class="text-panel">
+        <p class="label" id="label">Erfaring og kompetencer</p>
+
+        <h2 id="section-title">Erfaring og kompetencer</h2>
+
+        <p id="section-text">
+          En levende oversigt over min erfaring, mine kreative kompetencer og de rum, jeg arbejder i.
+        </p>
+
+        <ul id="section-list">
+          <li>Visuel identitet og digital formidling</li>
+          <li>Front-end, webdesign og brugeroplevelse</li>
+          <li>Motion graphics, SoMe og konceptudvikling</li>
+        </ul>
+      </article>
+
+      <article class="media-panel" id="media-panel">
+        <figure class="media-card">
+          <img src="img/erfaring-1.jpg" alt="Udvalgt visuelt arbejde" />
+          <figcaption>Udvalgt arbejde / case</figcaption>
+        </figure>
+
+        <figure class="media-card small">
+          <img src="img/erfaring-2.jpg" alt="Detalje fra visuelt arbejde" />
+          <figcaption>Proces / detalje</figcaption>
+        </figure>
+      </article>
+    </section>
+  </main>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
