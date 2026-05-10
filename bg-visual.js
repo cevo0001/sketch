@@ -8,7 +8,7 @@ camera.position.z = 5.2;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 document.body.appendChild(renderer.domElement);
 
 const loader = new THREE.TextureLoader();

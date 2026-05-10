@@ -9,7 +9,7 @@ camera.position.z = 20;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(1.2);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 document.body.appendChild(renderer.domElement);
 
 scene.add(new THREE.AmbientLight(0xffffff, 0.35));
