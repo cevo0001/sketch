@@ -4,12 +4,22 @@ import { SVGLoader } from "SVGLoader";
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#020204");
 
-const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(
+  42,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+
 camera.position.z = 20;
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({
+  antialias: true
+});
+
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 0.9));
+renderer.setPixelRatio(1);
+
 document.body.appendChild(renderer.domElement);
 
 scene.add(new THREE.AmbientLight(0xffffff, 0.35));
@@ -43,82 +53,134 @@ const chrome = new THREE.MeshPhysicalMaterial({
   roughness: 0.015,
   clearcoat: 1,
   clearcoatRoughness: 0,
-  envMapIntensity: 2
+  envMapIntensity: 4
 });
 
 let group;
 let baseY = 0;
+
 let mouseX = 0;
 let mouseY = 0;
 
 const loader = new SVGLoader();
 
 loader.load("img/testafhund.svg", (data) => {
+
   group = new THREE.Group();
 
   data.paths.forEach((path) => {
+
     const shapes = SVGLoader.createShapes(path);
 
     shapes.forEach((shape) => {
+
       const geometry = new THREE.ExtrudeGeometry(shape, {
-       depth: 1.8,
-        bevelThickness: 0.2,
-       bevelSize: 0.1,
-        bevelSegments: 3,
-        curveSegments: 8
+        depth: 2.4,
+        bevelEnabled: true,
+        bevelThickness: 0.35,
+        bevelSize: 0.16,
+        bevelSegments: 4,
+        curveSegments: 12
       });
 
       geometry.computeVertexNormals();
 
       const mesh = new THREE.Mesh(geometry, chrome);
+
       group.add(mesh);
+
     });
+
   });
 
+  // CENTER SVG
   const box = new THREE.Box3().setFromObject(group);
+
   const center = new THREE.Vector3();
+
   box.getCenter(center);
 
-  group.position.set(-center.x * 0.06, center.y * 0.06, 0);
-  group.scale.set(0.06, -0.06, 0.06);
+  group.position.set(
+    -center.x,
+    -center.y,
+    0
+  );
+
+  // SCALE
+  group.scale.set(
+    0.03,
+    -0.03,
+    0.03
+  );
+
   group.rotation.x = 0.15;
 
   baseY = group.position.y;
 
   scene.add(group);
+
 });
 
 window.addEventListener("mousemove", (e) => {
+
   mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+
   mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+
 });
 
 function animate(time = 0) {
+
   requestAnimationFrame(animate);
 
   const t = time * 0.001;
 
   if (group) {
-    group.rotation.y = mouseX * 0.55 + Math.sin(t * 0.7) * 0.25;
-    group.rotation.x = 0.15 + mouseY * 0.25 + Math.sin(t * 0.9) * 0.06;
-    group.rotation.z = Math.sin(t * 0.5) * 0.04;
 
-    group.position.y = baseY + Math.sin(t * 1.2) * 0.22;
+    group.rotation.y =
+      mouseX * 0.55 +
+      Math.sin(t * 0.7) * 0.25;
+
+    group.rotation.x =
+      0.15 +
+      mouseY * 0.25 +
+      Math.sin(t * 0.9) * 0.06;
+
+    group.rotation.z =
+      Math.sin(t * 0.5) * 0.04;
+
+    group.position.y =
+      baseY +
+      Math.sin(t * 1.2) * 0.22;
+
   }
 
   keyLight.position.x = mouseX * 8;
+
   keyLight.position.y = mouseY * 5 + 3;
 
-  redLight.intensity = 3.5 + Math.sin(t * 1.8) * 1.8;
-  blueLight.intensity = 3 + Math.cos(t * 1.5) * 1.6;
+  redLight.intensity =
+    3.5 + Math.sin(t * 1.8) * 1.8;
+
+  blueLight.intensity =
+    3 + Math.cos(t * 1.5) * 1.6;
 
   renderer.render(scene, camera);
+
 }
 
 animate();
 
 window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+
+  camera.aspect =
+    window.innerWidth / window.innerHeight;
+
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  renderer.setSize(
+    window.innerWidth,
+    window.innerHeight
+  );
+
 });
