@@ -61,11 +61,11 @@ loader.load("img/testafhund.svg", (data) => {
 
     shapes.forEach((shape) => {
       const geometry = new THREE.ExtrudeGeometry(shape, {
-       depth: 1.4,
-bevelThickness: 0.12,
-bevelSize: 0.06,
-bevelSegments: 2,
-curveSegments: 6
+       depth: 1.8,
+        bevelThickness: 0.2,
+       bevelSize: 0.1,
+        bevelSegments: 3,
+        curveSegments: 8
       });
 
       geometry.computeVertexNormals();
