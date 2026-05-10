@@ -43,7 +43,7 @@ const chrome = new THREE.MeshPhysicalMaterial({
   roughness: 0.015,
   clearcoat: 1,
   clearcoatRoughness: 0,
-  envMapIntensity: 4
+  envMapIntensity: 2
 });
 
 let group;
@@ -61,12 +61,11 @@ loader.load("img/testafhund.svg", (data) => {
 
     shapes.forEach((shape) => {
       const geometry = new THREE.ExtrudeGeometry(shape, {
-        depth: 2.4,
-        bevelEnabled: true,
-        bevelThickness: 0.35,
-        bevelSize: 0.16,
-        bevelSegments: 4,
-        curveSegments: 12
+       depth: 1.4,
+bevelThickness: 0.12,
+bevelSize: 0.06,
+bevelSegments: 2,
+curveSegments: 6
       });
 
       geometry.computeVertexNormals();
