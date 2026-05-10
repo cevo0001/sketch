@@ -61,7 +61,7 @@ const pages = [
   {
     label: "Visuals",
     title: "Visuals",
-    text: "Et udvalg af mine visuelle eksperimenter og elementer til brug af brand, hjemmeside og SoMe - på tværs af illustration, animation, 3D, digital kunst og grafiske universer.",
+    text: "Et udvalg af mine visuelle eksperimenter og elementer til brug af brand, hjemmeside og SoMe - på tværs af illustration, animation, 3D, digital kunst og grafiske universer. Jeg kan godt lide at lave det interaktivt, så prøv at hold musen over nogen af dem og klik og drej. Kvaliteten herinde er lavet med lav pixel, så siden kan loade bedre - disse visuals fremstår skarpt og professionelt til brug af brand og SoMe",
     bullets: [
       "3D, animation og motion graphics",
       "Illustration, grafik og digital art",
