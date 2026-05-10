@@ -172,6 +172,10 @@ function updateContent() {
   page.images.forEach((src, index) => {
   const figure = document.createElement("figure");
   figure.className = "media-card";
+
+if (src.includes("creature.mp4")) {
+  figure.classList.add("tall-video");
+}
   figure.style.setProperty("--tilt", `${random(-2, 2)}deg`);
 
   let media;
