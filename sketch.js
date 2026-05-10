@@ -176,11 +176,20 @@ function updateContent() {
 
   let media;
 
-  if (src.endsWith(".html")) {
-    media = document.createElement("iframe");
-    media.src = src;
-    media.title = page.captions[index] || "Interactive artwork";
-    media.setAttribute("loading", "lazy");
+if (src.endsWith(".html")) {
+  media = document.createElement("button");
+  media.className = "load-visual-btn";
+  media.innerText = "Load interactive visual";
+
+  media.addEventListener("click", () => {
+    const iframe = document.createElement("iframe");
+    iframe.src = src;
+    iframe.title = page.captions[index] || "Interactive artwork";
+    iframe.setAttribute("loading", "lazy");
+
+    figure.replaceChild(iframe, media);
+  });
+
   } else if (src.endsWith(".mp4") || src.endsWith(".webm")) {
     media = document.createElement("video");
     media.src = src;
