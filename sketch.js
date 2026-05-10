@@ -80,7 +80,7 @@ images: [
   "svg-visual.html",
   "img/maleri.jpeg",
   "img/circ.png",
-  "img/scen6.png",
+  "img/event6.png",
   "img/band1.png"
 ],
 captions: [
