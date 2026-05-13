@@ -55,7 +55,7 @@ const pages = [
       "Visuel strategi og SoMe-universer",
       "Video, grafik og storytelling"
     ],
-    images: ["img/some1.jpg", "img/some2.jpg", "img/some2.png", "img/some3.jpg", "img/some4.jpg", "img/some5.jpg", "img/some6.jpg", "img/some7.png", "img/some8.png", "img/some9.png", "img/some10.png", "img/some11.jpg", "img/kis.png", "img/some12.png", "img/some13.png", "img/some14.JPG", "img/some15.png", "img/some16.JPG", "img/some17.JPG", "img/some18.png", "img/some19.png"],
+    images: ["img/some1.jpg", "img/some2.jpg", "img/some2.png", "img/some3.jpg", "img/some4.jpg", "img/some5.jpg", "img/some6.jpg", "img/some7.png", "img/some8.png", "img/some9.png", "img/some10.png", "img/some11.jpg", "img/kis.png", "img/some12.png", "img/some14.JPG", "img/some15.png", "img/some16.JPG", "img/some17.JPG", "img/some18.png", "img/some19.png"],
     captions: ["SoMe content", "Kampagne / reel"]
   },
   {
