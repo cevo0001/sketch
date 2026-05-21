@@ -6,7 +6,7 @@ const pages = [
  {
   label: "Erfaring og kompetencer",
   title: "Erfaring og kompetencer",
-  text: "Kreativ multimediedesigner med erfaring inden for visuel kommunikation, webdesign, SoMe-content, grafisk design, videoredigering, motion graphics og konceptudvikling. Jeg arbejder i krydsfeltet mellem æstetik, digital formidling og kreative brugeroplevelser med fokus på stemning, identitet og interaktivitet. Jeg har erfaring med projektledelse og gruppefacilitering gennem arbejde med unge, selvstændigt terapeutisk arbejde under navnet Kærlighedsterapeuten, frivilligt arbejde på Amberley House i New Zealand og deltagelse i De Sceneste 0.2 – et kreativt og tværkunstnerisk uddannelsesforløb for unge kulturskabere i Danmark med fokus på samskabelse, projektledelse og kunstnerisk udvikling, herunder opsætning af Hjerteland på Heartland Festival. Jeg har afsluttet praktik hos Dansk Vegetarisk Forening som grafisk designer og illustrator, hvor jeg arbejdede med SoMe-content, visuel identitet, videoredigering, animationer og hjemmesideopdateringer. Under min uddannelse har jeg lavet hjemmesider til forskellige brands og caféer.",
+  text: "Kreativ multimediedesigner med erfaring inden for visuel kommunikation, webdesign, SoMe-content, grafisk design, videoredigering, motion graphics og konceptudvikling. <br><br> Jeg arbejder i krydsfeltet mellem æstetik, digital formidling og kreative brugeroplevelser med fokus på stemning, identitet, UX/UI fokuseret og interaktivitet. Jeg har erfaring med projektledelse og gruppefacilitering gennem arbejde med unge, selvstændigt terapeutisk arbejde under navnet Kærlighedsterapeuten, frivilligt arbejde på Amberley House i New Zealand og deltagelse i De Sceneste 0.2 – et kreativt og tværkunstnerisk uddannelsesforløb for unge kulturskabere i Danmark med fokus på samskabelse, projektledelse og kunstnerisk udvikling, herunder opsætning af Hjerteland på Heartland Festival. <br><br> Jeg har afsluttet praktik hos Dansk Vegetarisk Forening som grafisk designer og illustrator, hvor jeg arbejdede med SoMe-content, visuel identitet, videoredigering, animationer og hjemmesideopdateringer. <br><br> Under min uddannelse har jeg lavet hjemmesider til forskellige brands og caféer, og haft samarbejde kørende med virksomheder og arbejder godt i teams.",
   bullets: [
     "Front-end: HTML, CSS, JavaScript, React, p5.js, Astro, API, JSON, Supabase og Fetch",
     "Design & UX: Figma, Adobe CC, layout, grafik, visuel identitet, UX/UI, designprincipper og bæredygtigt design",
@@ -42,7 +42,8 @@ const pages = [
       "Kulturmiljøer, festival, caféer og kreative fællesskaber",
       "Visuel formidling til events og samarbejder",
       "Æstetik, atmosfære og brugeroplevelse",
-      "https://kismet-eksamen.netlify.app/events/"
+      "Kismet eksamen - eventside: <a href='https://kismet-eksamen.netlify.app/events/' target='_blank'>kismet-eksamen</a>"
+    
   
     ],
     images: ["img/event1.png", "img/event2.png", "img/event3.png", "img/event4.png", "img/event5.png", "img/event6.png", "img/event7.png", "img/event8.png", "img/event9.png", "img/event10.png", "img/event11.png", "img/event12.png"],
